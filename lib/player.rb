@@ -19,7 +19,7 @@ class Player
     end
 
     def attacks(player_hit)
-        puts "Le joueur #{self.name} attaque le joueur #{player_hit.name}" #self = le joueur "actif", player_hit le joueur "passif"
+        puts "Le joueur #{self.name} attaque le joueur #{player_hit.name} !" #self = l'instance qui appelle la méthode dans pry, player_hit la variable
         damage_inflicted = compute_damage #récupère un chiffre aléatoire fourni par méthode compute damage pr être utilisé ici
         puts "Le joueur #{self.name} marave #{player_hit.name} et lui retire #{damage_inflicted} points !"
         player_hit.gets_damage(damage_inflicted) #retire les points de vie avec methode gets damage en utilisant chiffre aléatoire fourni
