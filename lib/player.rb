@@ -1,14 +1,15 @@
 class Player
-    attr_accessor :name, :life_points
+    attr_accessor :name, :life_points, :weapon_level
     @@all_players = []
 
     def initialize(the_name)
         @name = the_name
         @life_points = 10
+        @weapon_level = 0
     end
 
     def show_state
-        puts "#{@name} a #{@life_points} points de CamelVie." #affiche le life points correspondant au joueur selectionné
+        puts "#{@name} a #{@life_points} points de CamelVie et une arme de niveau #{@weapon_level}." #affiche le life points correspondant au joueur selectionné
     end
 
     def gets_damage(damage)
@@ -27,5 +28,19 @@ class Player
 
     def compute_damage #sert à générer un nombre aléatoire pour l'utiliser après dans l'attaque
         return rand(1..6)
+    end
+end
+
+class HumanPlayer < Player
+    attr_accessor :weapon_level
+
+    def initialize(the_name)
+        super(the_name)
+        @life_points = 100
+        @weapon_level = 2
+    end
+
+    def compute_damage
+        rand(1..6) * @weapon_level
     end
 end
