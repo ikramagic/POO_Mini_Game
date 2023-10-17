@@ -4,8 +4,9 @@ Bundler.require
 require_relative 'lib/game'
 require_relative 'lib/player'
 
-#binding.pry
+binding.pry
 
+=begin 
 player1 = Player.new("Justine")
 player2 = Player.new("Gérard")
 
@@ -36,3 +37,4 @@ puts "________________________________________\n"
 puts "\nFin du match.\nScore final :"
 player1.show_state
 player2.show_state
+=end
