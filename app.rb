@@ -4,9 +4,6 @@ Bundler.require
 require_relative 'lib/game'
 require_relative 'lib/player'
 
-binding.pry
-
-=begin 
 player1 = Player.new("Justine")
 player2 = Player.new("Gérard")
 
@@ -15,6 +12,8 @@ puts "______>______>______| Bienvenue dans CamelFight Simulator |______<______<_
 puts "\nVoici la jauge de CamelVie de nos deux joueurs :"
     player1.show_state
     player2.show_state
+
+puts "________________________________________\n"
 
     puts "\nPassons à la phase d'attaque :"
 
@@ -37,4 +36,6 @@ puts "________________________________________\n"
 puts "\nFin du match.\nScore final :"
 player1.show_state
 player2.show_state
-=end
+
+puts "\n\n______>______>______| Merci d'avoir joué à CamelFight Simulator |______<______<______"
+puts "__________________>_________>______| Au revoir |______<_________<____________________"
