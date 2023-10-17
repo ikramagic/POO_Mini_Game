@@ -43,4 +43,20 @@ class HumanPlayer < Player
     def compute_damage
         rand(1..6) * @weapon_level
     end
+
+    def search_weapon
+        dice = rand(1..6)
+        if dice > @weapon_level
+            puts "Tu as trouvé une arme de niveau #{dice}."
+            puts "Bravo! L'arme trouvée est de meilleur niveau! On la garde."
+            @weapon_level = dice
+        else
+            puts "Tu as trouvé une arme de niveau #{dice}."
+            puts "Pas de bol! L'arme trouvée est nulle. Laisse tomber, tu gardes ton arme actuelle."
+        end
+    end
+
+    def search_health_pack
+        dice = 
+    end
 end
