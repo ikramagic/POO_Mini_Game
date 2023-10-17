@@ -57,6 +57,15 @@ class HumanPlayer < Player
     end
 
     def search_health_pack
-        dice = 
+        dice = rand(1..6)
+        if dice == 1
+            puts "Oh, oh... pas de chance ! "
+        elsif dice == 2 || dice == 3 || dice == 4 || dice == 5
+            puts "Bravo, tu as trouvé un pack de +50 points de vie !"
+            @life_points = self.life_points + 50
+        elsif dice == 6
+            puts "Waow, tu as trouvé un pack de +80 points de vie !"
+            @life_points = self.life_points + 80
+        end
     end
 end
